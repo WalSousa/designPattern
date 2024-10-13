@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:walsousa
+    driverClassName: org.h2.Driver
+    username: wal
+    password: wal
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  h2:
+    console:
+      path: /h2
+      enabled: true
+url:
+  viaCep: https://viacep.com.br/ws/
+
+server:
+  port: 8090
+  contextPath: /gw_hml_clients
