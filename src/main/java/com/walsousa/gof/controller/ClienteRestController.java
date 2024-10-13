@@ -22,8 +22,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/clientes")
 public class ClienteRestController {
 
+	private final ClienteService clienteService;
+
 	@Autowired
-	private ClienteService clienteService;
+	public ClienteRestController(ClienteService clienteService) {
+		this.clienteService = clienteService;
+	}
 
 	@GetMapping
 	public ResponseEntity<ClientsResponseDTO> getAllClients() throws BusinessException {
